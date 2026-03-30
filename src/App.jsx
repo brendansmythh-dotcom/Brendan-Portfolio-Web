@@ -5,6 +5,15 @@ export default function App() {
   const lastName = 'Smyth.'
   const subtitleLine = 'Screenwriter & Story Editor. Multiple produced credits.'
   const sceneHeadingText = 'THE WRITTEN WORD — PRESENT DAY'
+  function shuffleArray(arr) {
+    const a = [...arr]
+    for (let i = a.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[a[i], a[j]] = [a[j], a[i]]
+    }
+    return a
+  }
+
   const scrollingScreenplayLines = [
     'INT. APARTMENT — NIGHT',
     'EXT. EMPTY ROAD — NIGHT',
@@ -47,6 +56,11 @@ export default function App() {
     'CLOSE ON:',
     'WIDE SHOT:',
   ]
+
+  // Randomize order per page load (keeps the motion feeling “alive” without requiring new content)
+  const [scrollingScreenplayLinesShuffled] = useState(() =>
+    shuffleArray(scrollingScreenplayLines),
+  )
 
   const [typedFirst, setTypedFirst] = useState('')
   const [typedLast, setTypedLast] = useState('')
@@ -183,14 +197,14 @@ export default function App() {
         <div className="scrolling-screenplay" aria-hidden="true">
           <div className="scrolling-screenplay__track">
             <div className="scrolling-screenplay__sequence">
-              {scrollingScreenplayLines.map((line, idx) => (
+              {scrollingScreenplayLinesShuffled.map((line, idx) => (
                 <div className="scroll-line" key={`ss-a-${idx}`}>
                   <span className="scroll-scene">{line}</span>
                 </div>
               ))}
             </div>
             <div className="scrolling-screenplay__sequence">
-              {scrollingScreenplayLines.map((line, idx) => (
+              {scrollingScreenplayLinesShuffled.map((line, idx) => (
                 <div className="scroll-line" key={`ss-b-${idx}`}>
                   <span className="scroll-scene">{line}</span>
                 </div>
