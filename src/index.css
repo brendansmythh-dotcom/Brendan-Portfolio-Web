@@ -334,6 +334,12 @@
     color: var(--red);
   }
 
+  .proj-status-tag--wip {
+    background: rgba(234, 179, 8, 0.14);
+    border: 1px solid rgba(250, 204, 21, 0.55);
+    color: #facc15;
+  }
+
   .project-watch-link {
     font-size: 0.62rem;
     letter-spacing: 0.1em;

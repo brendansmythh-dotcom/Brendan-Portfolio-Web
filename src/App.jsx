@@ -185,22 +185,6 @@ export default function App() {
           <div className="project-card">
             <div className="project-img placeholder">
               <span className="project-img-label">Add Film Still</span>
-              <span className="project-year-badge">2026</span>
-            </div>
-            <div className="project-body">
-              <div className="project-role-tag">Writer</div>
-              <div className="project-title">Expectations</div>
-              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
-              <div className="project-footer">
-                <span className="proj-status-tag">Under Production</span>
-                <a href="#" className="project-watch-link">Watch Film →</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <div className="project-img placeholder">
-              <span className="project-img-label">Add Film Still</span>
               <span className="project-year-badge">2024</span>
             </div>
             <div className="project-body">
@@ -209,22 +193,6 @@ export default function App() {
               <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
               <div className="project-footer">
                 <span className="proj-status-tag">Produced</span>
-                <a href="#" className="project-watch-link">Watch Film →</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <div className="project-img placeholder">
-              <span className="project-img-label">Add Film Still</span>
-              <span className="project-year-badge">2026</span>
-            </div>
-            <div className="project-body">
-              <div className="project-role-tag">Story Editor</div>
-              <div className="project-title">Fitz</div>
-              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
-              <div className="project-footer">
-                <span className="proj-status-tag">Under Production</span>
                 <a href="#" className="project-watch-link">Watch Film →</a>
               </div>
             </div>
@@ -247,8 +215,8 @@ export default function App() {
           </div>
 
           <div className="project-card">
-            <div className="project-img placeholder">
-              <span className="project-img-label">Add Music Video Still</span>
+            <div className="project-img">
+              <img src="/paralyzed-still.png" alt="Paralyzed — music video still" />
               <span className="project-year-badge">2025</span>
             </div>
             <div className="project-body">
@@ -257,7 +225,39 @@ export default function App() {
               <p className="project-desc">Add a short description or credit note for this music video here.</p>
               <div className="project-footer">
                 <span className="proj-status-tag">Produced</span>
-                <a href="#" className="project-watch-link">Watch Video →</a>
+                <a href="https://www.youtube.com/watch?v=TkNUurX3RPk" target="_blank" rel="noreferrer" className="project-watch-link">Watch on YouTube →</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <div className="project-img">
+              <img src="/expectations-still.png" alt="Expectations — film still" />
+              <span className="project-year-badge">2026</span>
+            </div>
+            <div className="project-body">
+              <div className="project-role-tag">Writer</div>
+              <div className="project-title">Expectations</div>
+              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
+              <div className="project-footer">
+                <span className="proj-status-tag proj-status-tag--wip">Under Production</span>
+                <a href="#" className="project-watch-link">Watch Film →</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <div className="project-img placeholder">
+              <span className="project-img-label">Add Film Still</span>
+              <span className="project-year-badge">2026</span>
+            </div>
+            <div className="project-body">
+              <div className="project-role-tag">Story Editor</div>
+              <div className="project-title">Fitz</div>
+              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
+              <div className="project-footer">
+                <span className="proj-status-tag proj-status-tag--wip">Under Production</span>
+                <a href="#" className="project-watch-link">Watch Film →</a>
               </div>
             </div>
           </div>
