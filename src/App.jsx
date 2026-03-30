@@ -98,7 +98,6 @@ export default function App() {
           <span className="ur">{typedLast || '\u00A0'}</span>
           {typedDone ? <span className="type-underline" aria-hidden="true" /> : null}
         </h1>
-        <p className="hero-role">Screenwriter &amp; Story Editor. Multiple produced credits.</p>
         <p className="hero-action">
           A trained screenwriter whose work has made it from the page to the screen —
           crafting narratives that move through festival circuits, production houses,
