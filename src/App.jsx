@@ -1,6 +1,50 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function App() {
+  const firstName = 'Brendan'
+  const lastName = 'Smyth.'
+
+  const [typedFirst, setTypedFirst] = useState('')
+  const [typedLast, setTypedLast] = useState('')
+  const [typedDone, setTypedDone] = useState(false)
+
+  useEffect(() => {
+    setTypedFirst('')
+    setTypedLast('')
+    setTypedDone(false)
+
+    let i = 0
+    let j = 0
+    let firstTimer = null
+    let secondTimer = null
+
+    firstTimer = window.setInterval(() => {
+      i += 1
+      setTypedFirst(firstName.slice(0, i))
+
+      if (i >= firstName.length) {
+        if (firstTimer) window.clearInterval(firstTimer)
+
+        window.setTimeout(() => {
+          secondTimer = window.setInterval(() => {
+            j += 1
+            setTypedLast(lastName.slice(0, j))
+
+            if (j >= lastName.length) {
+              if (secondTimer) window.clearInterval(secondTimer)
+              setTypedDone(true)
+            }
+          }, 65)
+        }, 350)
+      }
+    }, 75)
+
+    return () => {
+      if (firstTimer) window.clearInterval(firstTimer)
+      if (secondTimer) window.clearInterval(secondTimer)
+    }
+  }, [])
+
   useEffect(() => {
     const obs = new IntersectionObserver(
       (entries) => {
@@ -40,7 +84,6 @@ export default function App() {
           <li><a href="#reel">Reel</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#credits">Credits</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#testimonials">Press</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -50,8 +93,10 @@ export default function App() {
       <section id="hero">
         <div className="scene-heading">THE WRITTEN WORD — PRESENT DAY</div>
         <h1 className="hero-name">
-          Brendan<br />
-          <span className="ur">Smyth.</span>
+          <span>{typedFirst || '\u00A0'}</span>
+          <br />
+          <span className="ur">{typedLast || '\u00A0'}</span>
+          {typedDone ? <span className="type-underline" aria-hidden="true">_</span> : null}
         </h1>
         <p className="hero-role">Screenwriter &amp; Story Editor. Multiple produced credits.</p>
         <p className="hero-action">
@@ -85,6 +130,22 @@ export default function App() {
             <p>
               He is currently open to new collaborations, commissions, and development opportunities. Add anything specific here — current projects, training, a notable collaboration, or what drives your writing.
             </p>
+            <div className="mini-skills" aria-label="Skills">
+              <h3>Skills</h3>
+              <div className="mini-skills-tags">
+                <span className="mini-skill">Screenwriting</span>
+                <span className="mini-skill">Feature Development</span>
+                <span className="mini-skill">Short Form Narrative</span>
+                <span className="mini-skill">Story Development</span>
+                <span className="mini-skill">Script Editing</span>
+                <span className="mini-skill">Directing</span>
+                <span className="mini-skill">Story Editing</span>
+                <span className="mini-skill">Transmedia</span>
+                <span className="mini-skill">Location Sound</span>
+                <span className="mini-skill">Final Draft / Fade In</span>
+                <span className="mini-skill">Development Pitching</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -236,28 +297,6 @@ export default function App() {
             </tr>
           </tbody>
         </table>
-      </section>
-
-      <section id="skills">
-        <div className="slugline"><span className="si">INT.</span> Skills &amp; Craft</div>
-        <div className="skills-layout fade-up">
-          <div className="skills-col">
-            <h3>Writing</h3>
-            <div className="skill-item"><span className="skill-name">Screenwriting</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '96%' }} /></div></div>
-            <div className="skill-item"><span className="skill-name">Feature Development</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '90%' }} /></div></div>
-            <div className="skill-item"><span className="skill-name">Short Form Narrative</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '94%' }} /></div></div>
-            <div className="skill-item"><span className="skill-name">Story Development</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '88%' }} /></div></div>
-            <div className="skill-item"><span className="skill-name">Script Editing</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '85%' }} /></div></div>
-          </div>
-          <div className="skills-col">
-            <h3>Production &amp; Media</h3>
-            <div className="skill-item"><span className="skill-name">Story Editing</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '88%' }} /></div></div>
-            <div className="skill-item"><span className="skill-name">Transmedia</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '78%' }} /></div></div>
-            <div className="skill-item"><span className="skill-name">Location Sound</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '72%' }} /></div></div>
-            <div className="skill-item"><span className="skill-name">Final Draft / Fade In</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '95%' }} /></div></div>
-            <div className="skill-item"><span className="skill-name">Development Pitching</span><div className="skill-bar-wrap"><div className="skill-bar" style={{ width: '78%' }} /></div></div>
-          </div>
-        </div>
       </section>
 
       <section id="testimonials">
