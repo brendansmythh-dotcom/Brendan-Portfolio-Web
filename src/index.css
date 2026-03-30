@@ -93,7 +93,7 @@
 
   .hero-name {
     font-family: 'Fraunces', serif;
-    font-size: clamp(3.2rem, 8.2vw, 7.1rem);
+    font-size: clamp(3rem, 7.5vw, 6.5rem);
     line-height: 1; letter-spacing: 0.01em; margin-bottom: 1.5rem;
   }
   .hero-name .ur { text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 8px; }
@@ -116,7 +116,7 @@
   }
 
   .hero-role { font-size: 0.95rem; color: var(--ink-mid); margin-bottom: 0.85rem; font-style: italic; padding-left: 2rem; font-family: 'Courier Prime', 'Courier New', monospace; }
-  .hero-action { font-size: 1.03rem; color: var(--ink-mid); max-width: 620px; margin-bottom: 3rem; padding-left: 2rem; line-height: 1.95; font-family: 'Courier Prime', 'Courier New', monospace; }
+  .hero-action { font-size: 0.9rem; color: var(--ink-mid); max-width: 560px; margin-bottom: 3rem; padding-left: 2rem; line-height: 1.85; font-family: 'Courier Prime', 'Courier New', monospace; }
   .hero-cta { display: flex; gap: 1.5rem; align-items: center; padding-left: 2rem; }
 
   .hero-watermark {
@@ -463,5 +463,5 @@
 
   @media (max-width: 600px) {
     .nav-links { display: none; }
-    .hero-name { font-size: 3.2rem; }
+    .hero-name { font-size: 2.8rem; }
   }
