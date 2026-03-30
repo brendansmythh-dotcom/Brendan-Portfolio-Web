@@ -183,38 +183,18 @@ export default function App() {
         <div className="scrolling-screenplay" aria-hidden="true">
           <div className="scrolling-screenplay__track">
             <div className="scrolling-screenplay__sequence">
-              {scrollingScreenplayLines.map((line, idx) => {
-                const m = line.match(/^(INT\.|EXT\.)\s*(.*)$/)
-                return (
-                  <div className="scroll-line" key={`ss-a-${idx}`}>
-                    {m ? (
-                      <>
-                        <span className="scroll-int">{m[1]}</span>
-                        <span className="scroll-scene">{m[2]}</span>
-                      </>
-                    ) : (
-                      <span className="scroll-scene">{line}</span>
-                    )}
-                  </div>
-                )
-              })}
+              {scrollingScreenplayLines.map((line, idx) => (
+                <div className="scroll-line" key={`ss-a-${idx}`}>
+                  <span className="scroll-scene">{line}</span>
+                </div>
+              ))}
             </div>
             <div className="scrolling-screenplay__sequence">
-              {scrollingScreenplayLines.map((line, idx) => {
-                const m = line.match(/^(INT\.|EXT\.)\s*(.*)$/)
-                return (
-                  <div className="scroll-line" key={`ss-b-${idx}`}>
-                    {m ? (
-                      <>
-                        <span className="scroll-int">{m[1]}</span>
-                        <span className="scroll-scene">{m[2]}</span>
-                      </>
-                    ) : (
-                      <span className="scroll-scene">{line}</span>
-                    )}
-                  </div>
-                )
-              })}
+              {scrollingScreenplayLines.map((line, idx) => (
+                <div className="scroll-line" key={`ss-b-${idx}`}>
+                  <span className="scroll-scene">{line}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
