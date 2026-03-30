@@ -5,6 +5,48 @@ export default function App() {
   const lastName = 'Smyth.'
   const subtitleLine = 'Screenwriter & Story Editor. Multiple produced credits.'
   const sceneHeadingText = 'THE WRITTEN WORD — PRESENT DAY'
+  const scrollingScreenplayLines = [
+    'INT. APARTMENT — NIGHT',
+    'EXT. EMPTY ROAD — NIGHT',
+    'INT. DINER — LATE NIGHT',
+    'EXT. PARKING LOT — RAINING',
+    'INT. BEDROOM — EARLY MORNING',
+    'EXT. FIELD — SUNSET',
+    'INT. HOSPITAL ROOM — DAY',
+    'EXT. FOREST — DUSK',
+    'INT. OFFICE — NIGHT',
+    'EXT. CITY STREET — NIGHT',
+    'INT. BASEMENT — NIGHT',
+    'EXT. BEACH — DAY',
+    'INT. CAR — MOVING — NIGHT',
+    'EXT. ROOFTOP — NIGHT',
+    'INT. HALLWAY — CONTINUOUS',
+    'EXT. GAS STATION — MIDNIGHT',
+    'INT. KITCHEN — MORNING',
+    'EXT. ALLEYWAY — NIGHT',
+    'INT. CLASSROOM — DAY',
+    'EXT. HIGHWAY — SUNSET',
+    'INT. MOTEL ROOM — NIGHT',
+    'EXT. BACKYARD — NIGHT',
+    'INT. TRAIN — MOVING — DAY',
+    'EXT. DESERT — DAY',
+    'INT. THEATER — EMPTY — NIGHT',
+    'EXT. SUBURBAN STREET — EVENING',
+    'INT. BATHROOM — NIGHT',
+    'EXT. PARK — DAY',
+    'INT. LIVING ROOM — NIGHT',
+    'EXT. BRIDGE — NIGHT',
+    'FADE IN:',
+    'CUT TO:',
+    'SMASH CUT:',
+    'MATCH CUT:',
+    'HARD CUT TO:',
+    'FADE TO BLACK.',
+    'HOLD ON:',
+    'INSERT:',
+    'CLOSE ON:',
+    'WIDE SHOT:',
+  ]
 
   const [typedFirst, setTypedFirst] = useState('')
   const [typedLast, setTypedLast] = useState('')
@@ -141,20 +183,38 @@ export default function App() {
         <div className="scrolling-screenplay" aria-hidden="true">
           <div className="scrolling-screenplay__track">
             <div className="scrolling-screenplay__sequence">
-              {Array.from({ length: 14 }).map((_, idx) => (
-                <div className="scroll-line" key={`ss-a-${idx}`}>
-                  <span className="scroll-int">INT.</span>
-                  <span className="scroll-scene">{sceneHeadingText}</span>
-                </div>
-              ))}
+              {scrollingScreenplayLines.map((line, idx) => {
+                const m = line.match(/^(INT\.|EXT\.)\s*(.*)$/)
+                return (
+                  <div className="scroll-line" key={`ss-a-${idx}`}>
+                    {m ? (
+                      <>
+                        <span className="scroll-int">{m[1]}</span>
+                        <span className="scroll-scene">{m[2]}</span>
+                      </>
+                    ) : (
+                      <span className="scroll-scene">{line}</span>
+                    )}
+                  </div>
+                )
+              })}
             </div>
             <div className="scrolling-screenplay__sequence">
-              {Array.from({ length: 14 }).map((_, idx) => (
-                <div className="scroll-line" key={`ss-b-${idx}`}>
-                  <span className="scroll-int">INT.</span>
-                  <span className="scroll-scene">{sceneHeadingText}</span>
-                </div>
-              ))}
+              {scrollingScreenplayLines.map((line, idx) => {
+                const m = line.match(/^(INT\.|EXT\.)\s*(.*)$/)
+                return (
+                  <div className="scroll-line" key={`ss-b-${idx}`}>
+                    {m ? (
+                      <>
+                        <span className="scroll-int">{m[1]}</span>
+                        <span className="scroll-scene">{m[2]}</span>
+                      </>
+                    ) : (
+                      <span className="scroll-scene">{line}</span>
+                    )}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
