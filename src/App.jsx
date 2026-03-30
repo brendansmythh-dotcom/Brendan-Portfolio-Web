@@ -287,8 +287,8 @@ export default function App() {
           </div>
 
           <div className="project-card">
-            <div className="project-img placeholder">
-              <span className="project-img-label">Add Film Still</span>
+            <div className="project-img">
+              <img src="/meek-still.png" alt="The Meek Shall Inherit The Earth — film still" />
               <span className="project-year-badge">2024</span>
             </div>
             <div className="project-body">
@@ -395,6 +395,12 @@ export default function App() {
               <td><span className="credit-role">Asst. Transmedia</span></td>
               <td style={{ fontSize: '0.82rem', color: 'var(--ink-faint)' }}>Documentary</td>
               <td style={{ fontSize: '0.82rem', color: 'var(--ink-faint)' }}>2024</td>
+            </tr>
+            <tr>
+              <td><span className="credit-title">CILECT</span></td>
+              <td><span className="credit-role">Film Juror</span></td>
+              <td style={{ fontSize: '0.82rem', color: 'var(--ink-faint)' }}>Internship</td>
+              <td style={{ fontSize: '0.82rem', color: 'var(--ink-faint)' }}>2025</td>
             </tr>
           </tbody>
         </table>
