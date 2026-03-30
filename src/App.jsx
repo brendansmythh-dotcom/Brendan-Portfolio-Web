@@ -4,6 +4,7 @@ export default function App() {
   const firstName = 'Brendan'
   const lastName = 'Smyth.'
   const subtitleLine = 'Screenwriter & Story Editor. Multiple produced credits.'
+  const sceneHeadingText = 'THE WRITTEN WORD — PRESENT DAY'
 
   const [typedFirst, setTypedFirst] = useState('')
   const [typedLast, setTypedLast] = useState('')
@@ -118,7 +119,7 @@ export default function App() {
       </nav>
 
       <section id="hero">
-        <div className="scene-heading fade-up">THE WRITTEN WORD — PRESENT DAY</div>
+        <div className="scene-heading fade-up">{sceneHeadingText}</div>
         <h1 className="hero-name fade-up">
           <span>{typedFirst || '\u00A0'}</span>
           <br />
@@ -135,6 +136,27 @@ export default function App() {
         <div className="hero-cta fade-up">
           <a href="#projects" className="btn-primary">View Credits</a>
           <a href="#contact" className="btn-ghost">Get in Touch</a>
+        </div>
+
+        <div className="scrolling-screenplay" aria-hidden="true">
+          <div className="scrolling-screenplay__track">
+            <div className="scrolling-screenplay__sequence">
+              {Array.from({ length: 14 }).map((_, idx) => (
+                <div className="scroll-line" key={`ss-a-${idx}`}>
+                  <span className="scroll-int">INT.</span>
+                  <span className="scroll-scene">{sceneHeadingText}</span>
+                </div>
+              ))}
+            </div>
+            <div className="scrolling-screenplay__sequence">
+              {Array.from({ length: 14 }).map((_, idx) => (
+                <div className="scroll-line" key={`ss-b-${idx}`}>
+                  <span className="scroll-int">INT.</span>
+                  <span className="scroll-scene">{sceneHeadingText}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

@@ -40,20 +40,20 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.05;
+    opacity: 0.035;
     mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
     background-size: 160px 160px;
-    animation: grainMove 7s steps(8) infinite;
+    animation: grainMove 9s steps(9) infinite;
   }
 
   @keyframes grainMove {
-    0% { transform: translate(0, 0); }
-    20% { transform: translate(-2%, 1%); }
-    40% { transform: translate(-1%, -2%); }
-    60% { transform: translate(2%, 1%); }
-    80% { transform: translate(1%, 2%); }
-    100% { transform: translate(0, 0); }
+    0% { transform: translate(0, 0); opacity: 0.03; }
+    20% { transform: translate(-2%, 1%); opacity: 0.04; }
+    40% { transform: translate(-1%, -2%); opacity: 0.035; }
+    60% { transform: translate(2%, 1%); opacity: 0.045; }
+    80% { transform: translate(1%, 2%); opacity: 0.04; }
+    100% { transform: translate(0, 0); opacity: 0.03; }
   }
 
   * { position: relative; z-index: 1; }
@@ -105,6 +105,7 @@
     min-height: 100vh; display: flex; flex-direction: column;
     justify-content: center; padding: 8rem clamp(1.25rem, 6vw, 7rem) 5rem;
     border-top: none; overflow: hidden;
+    position: relative;
   }
 
   .scene-heading {
@@ -147,6 +148,55 @@
     pointer-events: none;
     background: linear-gradient(120deg, rgba(245,242,236,0.06), transparent 45%);
     opacity: 0.9;
+  }
+
+  /* Right-side “scrolling screenplay” background column */
+  .scrolling-screenplay {
+    position: absolute;
+    right: clamp(0.9rem, 3.2vw, 3.5rem);
+    top: 14vh;
+    width: clamp(160px, 20vw, 230px);
+    height: 72vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.17;
+    filter: saturate(1.05);
+  }
+
+  .scrolling-screenplay__track {
+    transform: translateY(0);
+    will-change: transform;
+    animation: screenplayScroll 26s linear infinite;
+  }
+
+  .scrolling-screenplay__sequence {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+  }
+
+  .scroll-line {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: rgba(245,242,236,0.75);
+    white-space: nowrap;
+  }
+
+  .scroll-int {
+    color: var(--red);
+    font-weight: 700;
+    margin-right: 0.45rem;
+  }
+
+  .scroll-scene { color: rgba(245,242,236,0.72); }
+
+  @keyframes screenplayScroll {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
   }
 
   @keyframes heroSpotlight {
@@ -571,6 +621,7 @@
     .testimonials-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+    .scrolling-screenplay { display: none; }
   }
 
   @media (max-width: 600px) {
@@ -584,5 +635,6 @@
     body::after { animation: none; }
     #hero::before { animation: none; }
     .type-underline, .subtitle-caret { animation: none; }
+    .scrolling-screenplay__track { animation: none; transform: none; }
     .btn-primary, .btn-ghost { transition: none; }
   }
