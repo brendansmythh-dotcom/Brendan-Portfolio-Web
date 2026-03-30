@@ -167,8 +167,8 @@ export default function App() {
         <div className="slugline"><span className="si">INT.</span> Selected Projects</div>
         <div className="projects-grid fade-up">
           <div className="project-card">
-            <div className="project-img placeholder">
-              <span className="project-img-label">Add Film Still</span>
+            <div className="project-img">
+              <img src="/mongrel-bewitching-still.png" alt="Mongrel Bewitching — film still" />
               <span className="project-year-badge">2025</span>
             </div>
             <div className="project-body">
@@ -177,7 +177,7 @@ export default function App() {
               <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
               <div className="project-footer">
                 <span className="proj-status-tag">Produced</span>
-                <a href="#" className="project-watch-link">Watch Film →</a>
+                <a href="https://youtu.be/-ExLfeFW3JY" target="_blank" rel="noreferrer" className="project-watch-link">Watch on YouTube →</a>
               </div>
             </div>
           </div>
