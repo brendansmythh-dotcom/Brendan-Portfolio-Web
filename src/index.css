@@ -335,8 +335,8 @@
   }
 
   .proj-status-tag--wip {
-    background: rgba(234, 179, 8, 0.14);
-    border: 1px solid rgba(250, 204, 21, 0.55);
+    background: rgba(234, 179, 8, 0.12);
+    border: 1px solid rgba(234, 179, 8, 0.5);
     color: #facc15;
   }
 
