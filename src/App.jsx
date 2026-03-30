@@ -277,7 +277,7 @@ export default function App() {
             <div className="project-body">
               <div className="project-role-tag">Writer</div>
               <div className="project-title">Mongrel Bewitching</div>
-              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
+              <p className="project-desc">During the Salem Witch Trial, a grieving husband converses with the man who proclaimed his wife a witch, only to learn that the hunt is not over.</p>
               <div className="project-footer">
                 <span className="proj-status-tag">Produced</span>
                 <a href="https://youtu.be/-ExLfeFW3JY" target="_blank" rel="noreferrer" className="project-watch-link">Watch on YouTube →</a>
@@ -293,7 +293,7 @@ export default function App() {
             <div className="project-body">
               <div className="project-role-tag">Writer</div>
               <div className="project-title">The Meek Shall Inherit The Earth</div>
-              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
+              <p className="project-desc">The Meek Shall inherit the Earth is a documentary following the chronicles of the canadian based organization known as Indwell, a charity that has devoted itself to fighting the rising homeless crisis in Ontario.</p>
               <div className="project-footer">
                 <span className="proj-status-tag">Produced</span>
                 <a href="#" className="project-watch-link">Watch Film →</a>
@@ -325,7 +325,7 @@ export default function App() {
             <div className="project-body">
               <div className="project-role-tag">Story Editor · Music Video</div>
               <div className="project-title">Paralyzed</div>
-              <p className="project-desc">Add a short description or credit note for this music video here.</p>
+              <p className="project-desc">A group of elderly men reminiscing about their glory days as a rock band are transported back in time to one of their shows, allowing them to relive their pasts.</p>
               <div className="project-footer">
                 <span className="proj-status-tag">Produced</span>
                 <a href="https://www.youtube.com/watch?v=TkNUurX3RPk" target="_blank" rel="noreferrer" className="project-watch-link">Watch on YouTube →</a>
