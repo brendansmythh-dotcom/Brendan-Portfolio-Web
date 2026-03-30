@@ -97,7 +97,7 @@
     color: var(--red); font-weight: 700; margin-bottom: 2.5rem;
     display: flex; align-items: center; gap: 1rem;
   }
-  .slugline .si { color: var(--red); }
+  .slugline .si { color: var(--ink-faint); }
   .slugline::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--border-med); }
 
   .slugline--about { font-size: 0.82rem; }
