@@ -3,10 +3,13 @@ import { useEffect, useState } from 'react'
 export default function App() {
   const firstName = 'Brendan'
   const lastName = 'Smyth.'
+  const subtitleLine = 'Screenwriter & Story Editor. Multiple produced credits.'
 
   const [typedFirst, setTypedFirst] = useState('')
   const [typedLast, setTypedLast] = useState('')
   const [typedDone, setTypedDone] = useState(false)
+  const [typedSubtitle, setTypedSubtitle] = useState('')
+  const [subtitleDone, setSubtitleDone] = useState(false)
 
   useEffect(() => {
     setTypedFirst('')
@@ -61,6 +64,30 @@ export default function App() {
     return () => obs.disconnect()
   }, [])
 
+  useEffect(() => {
+    setTypedSubtitle('')
+    setSubtitleDone(false)
+
+    let i = 0
+    let intervalId = null
+    const startTimeoutId = window.setTimeout(() => {
+      intervalId = window.setInterval(() => {
+        i += 1
+        setTypedSubtitle(subtitleLine.slice(0, i))
+
+        if (i >= subtitleLine.length) {
+          if (intervalId) window.clearInterval(intervalId)
+          setSubtitleDone(true)
+        }
+      }, 28)
+    }, 650)
+
+    return () => {
+      window.clearTimeout(startTimeoutId)
+      if (intervalId) window.clearInterval(intervalId)
+    }
+  }, [])
+
   function handleSubmit(e) {
     e.preventDefault()
     const btn = e.target.querySelector('.form-submit')
@@ -91,15 +118,21 @@ export default function App() {
       </nav>
 
       <section id="hero">
-        <div className="scene-heading">THE WRITTEN WORD — PRESENT DAY</div>
-        <h1 className="hero-name">
+        <div className="scene-heading fade-up">THE WRITTEN WORD — PRESENT DAY</div>
+        <h1 className="hero-name fade-up">
           <span>{typedFirst || '\u00A0'}</span>
           <br />
           <span className="ur">{typedLast || '\u00A0'}</span>
           {typedDone ? <span className="type-underline" aria-hidden="true" /> : null}
         </h1>
-        <p className="hero-role">Screenwriter &amp; Story Editor. Multiple produced credits.</p>
-        <div className="hero-cta">
+        <p className="hero-role hero-role--typed fade-up" aria-label={subtitleLine}>
+          <span className="hero-role-text">{typedSubtitle || '\u00A0'}</span>
+          <span
+            className={`subtitle-caret${subtitleDone ? ' subtitle-caret--done' : ''}`}
+            aria-hidden="true"
+          />
+        </p>
+        <div className="hero-cta fade-up">
           <a href="#projects" className="btn-primary">View Credits</a>
           <a href="#contact" className="btn-ghost">Get in Touch</a>
         </div>
