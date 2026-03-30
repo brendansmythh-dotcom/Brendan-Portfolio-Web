@@ -21,7 +21,7 @@ export default function App() {
     e.preventDefault()
     const btn = e.target.querySelector('.form-submit')
     btn.textContent = 'Message Sent.'
-    btn.style.background = '#2B5FA6'
+    btn.style.background = '#00A651'
     setTimeout(() => {
       btn.textContent = 'Send Message →'
       btn.style.background = ''
