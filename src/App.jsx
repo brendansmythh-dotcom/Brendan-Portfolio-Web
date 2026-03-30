@@ -114,10 +114,9 @@ export default function App() {
         <div className="slugline"><span className="si">INT.</span> About Brendan</div>
         <div className="about-grid fade-up">
           <div>
-            <div className="about-photo" />
-            <p style={{ fontSize: '0.6rem', letterSpacing: '0.08em', color: 'var(--ink-faint)', marginTop: '0.6rem' }}>
-              — Add your photo here
-            </p>
+            <div className="about-photo">
+              <img src="/brendan-about.png" alt="Brendan Smyth" />
+            </div>
           </div>
           <div className="about-text">
             <h2>A writer who sees the world through <em>story structure.</em></h2>
