@@ -215,7 +215,7 @@ export default function App() {
       </section>
 
       <section id="about">
-        <div className="slugline"><span className="si">INT.</span> About me</div>
+        <div className="slugline slugline--about"><span className="si">INT.</span> About me</div>
         <div className="about-grid fade-up">
           <div>
             <div className="about-photo">
@@ -223,7 +223,6 @@ export default function App() {
             </div>
           </div>
           <div className="about-text">
-            <h2>About me</h2>
             <p>
               I am a fourth-year Bachelor of Film and Television (BFTV) student at Sheridan College, specializing in screenwriting and story editing. My work is rooted in a strong understanding of narrative structure, character development, and the collaborative nature of film production. In addition to writing, I bring hands-on experience in directing and location sound, giving me a well-rounded perspective from script to screen.
             </p>
