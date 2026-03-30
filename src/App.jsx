@@ -223,15 +223,18 @@ export default function App() {
             </div>
           </div>
           <div className="about-text">
-            <h2>A writer who sees the world through <em>story structure.</em></h2>
+            <h2>I am a fourth-year Bachelor of Film and Television (BFTV) student at Sheridan College, specializing in screenwriting and story editing.</h2>
             <p>
-              Brendan Smyth is a trained screenwriter with multiple produced film credits. His work spans a range of genres and tones — from intimate character-driven drama to bold, formally ambitious storytelling — united by a commitment to authentic voice and rigorous craft.
+              My work is rooted in a strong understanding of narrative structure, character development, and the collaborative nature of film production. In addition to writing, I bring hands-on experience in directing and location sound, giving me a well-rounded perspective from script to screen.
             </p>
             <p>
-              With scripts that have moved from development through to production, Brendan brings a deep understanding of what it takes to write for the screen at a professional level: not just the ability to put words on a page, but to navigate the full arc of a script&apos;s life — from first draft to final cut.
+              I recently completed an internship with the CILECT Film Jury, where I gained professional experience analyzing and evaluating films within a collaborative, industry-focused environment.
             </p>
             <p>
-              He is currently open to new collaborations, commissions, and development opportunities. Add anything specific here — current projects, training, a notable collaboration, or what drives your writing.
+              As a screenwriter, I primarily work in Final Draft and consistently maintain an active slate of projects. I am highly adaptable, comfortable working through multiple revisions, and thrive under tight deadlines. My goal is to contribute to compelling, character-driven stories while continuing to grow within a professional writing environment.
+            </p>
+            <p>
+              I am currently seeking opportunities as a screenwriter in the Greater Toronto Area.
             </p>
             <div className="mini-skills" aria-label="Skills">
               <h3>Skills</h3>
