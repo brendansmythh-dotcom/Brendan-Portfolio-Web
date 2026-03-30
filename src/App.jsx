@@ -96,7 +96,7 @@ export default function App() {
           <span>{typedFirst || '\u00A0'}</span>
           <br />
           <span className="ur">{typedLast || '\u00A0'}</span>
-          {typedDone ? <span className="type-underline" aria-hidden="true">_</span> : null}
+          {typedDone ? <span className="type-underline" aria-hidden="true" /> : null}
         </h1>
         <p className="hero-role">Screenwriter &amp; Story Editor. Multiple produced credits.</p>
         <p className="hero-action">
@@ -193,7 +193,7 @@ export default function App() {
               <div className="project-title">Expectations</div>
               <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
               <div className="project-footer">
-                <span className="proj-status-tag">Produced</span>
+                <span className="proj-status-tag">Under Production</span>
                 <a href="#" className="project-watch-link">Watch Film →</a>
               </div>
             </div>
@@ -225,7 +225,7 @@ export default function App() {
               <div className="project-title">Fitz</div>
               <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
               <div className="project-footer">
-                <span className="proj-status-tag">Produced</span>
+                <span className="proj-status-tag">Under Production</span>
                 <a href="#" className="project-watch-link">Watch Film →</a>
               </div>
             </div>
@@ -347,17 +347,14 @@ export default function App() {
             <h2>Let&apos;s put something on <em>the page.</em></h2>
             <p className="contact-sub">Open to commissions, co-writing, development, and collaboration.</p>
             <div className="contact-links">
-              <a href="mailto:brendan@youremail.com" className="contact-link">
-                <span className="cl-label">Email</span>brendan@youremail.com
+              <a href="mailto:b.smyth1@me.com" className="contact-link">
+                <span className="cl-label">Email</span>b.smyth1@me.com
               </a>
-              <a href="https://instagram.com/yourhandle" target="_blank" rel="noreferrer" className="contact-link">
-                <span className="cl-label">Instagram</span>@yourhandle
+              <a href="https://instagram.com/brendansmythh" target="_blank" rel="noreferrer" className="contact-link">
+                <span className="cl-label">Instagram</span>@brendansmythh
               </a>
-              <a href="https://vimeo.com/yourhandle" target="_blank" rel="noreferrer" className="contact-link">
-                <span className="cl-label">Vimeo</span>vimeo.com/yourhandle
-              </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer" className="contact-link">
-                <span className="cl-label">LinkedIn</span>linkedin.com/in/yourprofile
+              <a href="https://www.linkedin.com/in/brendan-smyth-b08879304" target="_blank" rel="noreferrer" className="contact-link">
+                <span className="cl-label">LinkedIn</span>linkedin.com/in/brendan-smyth-b08879304
               </a>
             </div>
           </div>
