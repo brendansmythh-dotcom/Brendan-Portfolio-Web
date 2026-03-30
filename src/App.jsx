@@ -194,8 +194,8 @@ export default function App() {
           </div>
 
           <div className="project-card">
-            <div className="project-img placeholder">
-              <span className="project-img-label">Add Film Still</span>
+            <div className="project-img">
+              <img src="/odeath-still.png" alt="O'Death — film still" />
               <span className="project-year-badge">2026</span>
             </div>
             <div className="project-body">
