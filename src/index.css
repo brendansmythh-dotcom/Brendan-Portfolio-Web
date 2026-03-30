@@ -1,15 +1,15 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --paper:      #F5F2EC;
-    --paper-dark: #EDE9DF;
-    --ink:        #1C1A16;
-    --ink-mid:    #5A5650;
-    --ink-faint:  #9A968F;
+    --paper:      #0F1115;
+    --paper-dark: #0B0D11;
+    --ink:        #F5F2EC;
+    --ink-mid:    #CFCAC0;
+    --ink-faint:  #8F8B83;
     --red:        #C0392B;
     --blue:       #2B5FA6;
-    --border:     rgba(28,26,22,0.13);
-    --border-med: rgba(28,26,22,0.27);
+    --border:     rgba(245,242,236,0.13);
+    --border-med: rgba(245,242,236,0.27);
   }
 
   html { scroll-behavior: smooth; }
@@ -27,7 +27,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background-image: repeating-linear-gradient(transparent, transparent 27px, rgba(28,26,22,0.04) 28px);
+    background-image: repeating-linear-gradient(transparent, transparent 27px, rgba(245,242,236,0.06) 28px);
     pointer-events: none;
     z-index: 0;
   }
@@ -53,7 +53,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
     padding: 1.2rem 4rem 1.2rem 5rem;
-    background: rgba(245,242,236,0.95);
+    background: rgba(15,17,21,0.92);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-med);
   }
@@ -104,7 +104,7 @@
   .hero-watermark {
     position: absolute; right: 3rem; bottom: 2.5rem;
     font-family: 'Special Elite', cursive; font-size: 10rem;
-    color: rgba(28,26,22,0.04); pointer-events: none; letter-spacing: -0.03em; line-height: 1;
+    color: rgba(245,242,236,0.05); pointer-events: none; letter-spacing: -0.03em; line-height: 1;
   }
 
   .btn-primary {
@@ -146,7 +146,7 @@
   .reel-h em { color: var(--red); font-style: italic; }
   .reel-sub { font-size: 0.82rem; color: var(--ink-faint); font-style: italic; margin-bottom: 2rem; }
 
-  .reel-box { position: relative; width: 100%; padding-bottom: 56.25%; background: var(--ink); border: 1px solid var(--border-med); }
+  .reel-box { position: relative; width: 100%; padding-bottom: 56.25%; background: var(--paper-dark); border: 1px solid var(--border-med); }
   .reel-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
   .reel-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem; }
   .reel-brackets { font-family: 'Special Elite', cursive; font-size: 2.5rem; color: rgba(245,242,236,0.13); letter-spacing: 0.5em; }
@@ -212,7 +212,7 @@
     font-size: 0.58rem;
     letter-spacing: 0.12em;
     color: rgba(245,242,236,0.7);
-    background: rgba(28,26,22,0.55);
+    background: rgba(0,0,0,0.45);
     padding: 0.15rem 0.45rem;
   }
 
@@ -285,7 +285,7 @@
   .credits-table thead tr { border-bottom: 2px solid var(--border-med); }
   .credits-table th { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); font-weight: 400; padding: 0.75rem 1rem 0.75rem 0; text-align: left; }
   .credits-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
-  .credits-table tbody tr:hover { background: rgba(28,26,22,0.03); }
+  .credits-table tbody tr:hover { background: rgba(245,242,236,0.03); }
   .credits-table td { padding: 1.25rem 1rem 1.25rem 0; font-size: 0.86rem; color: var(--ink-mid); vertical-align: top; }
   .credit-title { font-family: 'Special Elite', cursive; font-size: 1rem; color: var(--ink); display: block; margin-bottom: 0.2rem; }
   .credit-role {
