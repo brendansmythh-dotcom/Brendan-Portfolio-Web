@@ -91,20 +91,6 @@ export default function App() {
             <p>
               He is currently open to new collaborations, commissions, and development opportunities. Add anything specific here — current projects, training, a notable collaboration, or what drives your writing.
             </p>
-            <div className="about-stats">
-              <div>
-                <div className="stat-num">3</div>
-                <div className="stat-label">Written Credits</div>
-              </div>
-              <div>
-                <div className="stat-num">3</div>
-                <div className="stat-label">Story Editor Credits</div>
-              </div>
-              <div>
-                <div className="stat-num">—</div>
-                <div className="stat-label">Years Active</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
