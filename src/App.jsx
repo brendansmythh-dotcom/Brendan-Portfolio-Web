@@ -31,11 +31,6 @@ export default function App() {
 
   return (
     <>
-      <div className="margin-line" />
-      <div className="hole" />
-      <div className="hole" />
-      <div className="hole" />
-
       <nav>
         <a href="#hero" className="nav-logo">
           Brendan <span>Smyth</span>
@@ -53,7 +48,6 @@ export default function App() {
       </nav>
 
       <section id="hero">
-        <div className="hero-watermark">FADE IN</div>
         <div className="scene-heading">THE WRITTEN WORD — PRESENT DAY</div>
         <h1 className="hero-name">
           Brendan<br />

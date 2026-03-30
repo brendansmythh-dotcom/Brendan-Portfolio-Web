@@ -6,7 +6,8 @@
     --ink:        #F5F2EC;
     --ink-mid:    #CFCAC0;
     --ink-faint:  #8F8B83;
-    --red:        #C0392B;
+    /* Final Draft-like accent (green) */
+    --red:        #00A651;
     --blue:       #2B5FA6;
     --border:     rgba(245,242,236,0.13);
     --border-med: rgba(245,242,236,0.27);
@@ -17,7 +18,7 @@
   body {
     background: var(--paper);
     color: var(--ink);
-    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.7;
     overflow-x: hidden;
@@ -36,7 +37,7 @@
 
   .margin-line {
     position: fixed; left: 3.5rem; top: 0; bottom: 0;
-    width: 1px; background: rgba(192,57,43,0.17);
+    width: 1px; background: rgba(0,166,81,0.17);
     z-index: 50; pointer-events: none;
   }
 
@@ -52,13 +53,13 @@
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
-    padding: 1.2rem 4rem 1.2rem 5rem;
+    padding: 1.1rem clamp(1.25rem, 4.2vw, 5rem);
     background: rgba(15,17,21,0.92);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-med);
   }
 
-  .nav-logo { font-family: 'Special Elite', cursive; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
+  .nav-logo { font-family: 'Fraunces', serif; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
   .nav-logo span { color: var(--red); }
 
   .nav-links { display: flex; gap: 1.75rem; list-style: none; }
@@ -66,7 +67,7 @@
   .nav-links a:hover { color: var(--red); }
   .page-num { font-size: 0.68rem; color: var(--ink-faint); letter-spacing: 0.05em; }
 
-  section { padding: 5.5rem 6rem 5.5rem 7rem; border-top: 1px solid var(--border); }
+  section { padding: 5.5rem clamp(1.25rem, 6vw, 7rem); border-top: 1px solid var(--border); }
 
   .slugline {
     font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase;
@@ -79,7 +80,7 @@
   /* HERO */
   #hero {
     min-height: 100vh; display: flex; flex-direction: column;
-    justify-content: center; padding: 8rem 6rem 5rem 7rem;
+    justify-content: center; padding: 8rem clamp(1.25rem, 6vw, 7rem) 5rem;
     border-top: none; overflow: hidden;
   }
 
@@ -91,7 +92,7 @@
   .scene-heading::before { content: 'INT.'; color: var(--red); font-weight: 700; }
 
   .hero-name {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Fraunces', serif;
     font-size: clamp(3rem, 7.5vw, 6.5rem);
     line-height: 1; letter-spacing: 0.01em; margin-bottom: 1.5rem;
   }
@@ -103,7 +104,7 @@
 
   .hero-watermark {
     position: absolute; right: 3rem; bottom: 2.5rem;
-    font-family: 'Special Elite', cursive; font-size: 10rem;
+    font-family: 'Fraunces', serif; font-size: 10rem;
     color: rgba(245,242,236,0.05); pointer-events: none; letter-spacing: -0.03em; line-height: 1;
   }
 
@@ -132,24 +133,24 @@
   .about-photo::before { content: 'PHOTO'; font-size: 0.62rem; letter-spacing: 0.15em; color: var(--ink-faint); }
   .about-photo::after { content: ''; position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; border-top: 1.5px solid var(--red); border-right: 1.5px solid var(--red); }
 
-  .about-text h2 { font-family: 'Special Elite', cursive; font-size: 1.9rem; line-height: 1.3; margin-bottom: 1.5rem; }
+  .about-text h2 { font-family: 'Fraunces', serif; font-size: 1.9rem; line-height: 1.3; margin-bottom: 1.5rem; }
   .about-text h2 em { color: var(--red); font-style: italic; }
   .about-text p { color: var(--ink-mid); margin-bottom: 1.2rem; font-size: 0.92rem; line-height: 1.85; }
 
   .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
-  .stat-num { font-family: 'Special Elite', cursive; font-size: 2.2rem; color: var(--ink); line-height: 1; margin-bottom: 0.2rem; }
+  .stat-num { font-family: 'Fraunces', serif; font-size: 2.2rem; color: var(--ink); line-height: 1; margin-bottom: 0.2rem; }
   .stat-label { font-size: 0.62rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-faint); }
 
   /* REEL */
   #reel { background: var(--paper-dark); }
-  .reel-h { font-family: 'Special Elite', cursive; font-size: 1.9rem; color: var(--ink); margin-bottom: 0.6rem; }
+  .reel-h { font-family: 'Fraunces', serif; font-size: 1.9rem; color: var(--ink); margin-bottom: 0.6rem; }
   .reel-h em { color: var(--red); font-style: italic; }
   .reel-sub { font-size: 0.82rem; color: var(--ink-faint); font-style: italic; margin-bottom: 2rem; }
 
   .reel-box { position: relative; width: 100%; padding-bottom: 56.25%; background: var(--paper-dark); border: 1px solid var(--border-med); }
   .reel-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
   .reel-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem; }
-  .reel-brackets { font-family: 'Special Elite', cursive; font-size: 2.5rem; color: rgba(245,242,236,0.13); letter-spacing: 0.5em; }
+  .reel-brackets { font-family: 'Fraunces', serif; font-size: 2.5rem; color: rgba(245,242,236,0.13); letter-spacing: 0.5em; }
   .reel-label { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,236,0.28); text-align: center; max-width: 260px; line-height: 1.7; }
 
   /* =====================
@@ -167,16 +168,23 @@
     border: 1px solid var(--border-med);
     background: var(--paper);
     overflow: hidden;
-    transition: border-color 0.2s;
+    border-radius: 16px;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
   }
 
-  .project-card:hover { border-color: rgba(192,57,43,0.4); }
+  .project-card:hover {
+    border-color: rgba(0,166,81,0.55);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.35);
+  }
 
   /* Film still / poster area */
   .project-img {
     aspect-ratio: 16/10;
     background: var(--paper-dark);
     border-bottom: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,7 +241,7 @@
   }
 
   .project-title {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Fraunces', serif;
     font-size: 1.15rem;
     color: var(--ink);
     line-height: 1.2;
@@ -261,8 +269,8 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 0.22rem 0.55rem;
-    background: rgba(192,57,43,0.07);
-    border: 1px solid rgba(192,57,43,0.25);
+    background: rgba(0,166,81,0.07);
+    border: 1px solid rgba(0,166,81,0.25);
     color: var(--red);
   }
 
@@ -276,7 +284,7 @@
     padding-bottom: 1px;
     transition: color 0.2s;
   }
-  .project-watch-link:hover { color: var(--red); border-color: rgba(192,57,43,0.35); }
+  .project-watch-link:hover { color: var(--red); border-color: rgba(0,166,81,0.35); }
 
   /* ADDITIONAL CREDITS */
   #credits { background: var(--paper-dark); }
@@ -287,7 +295,7 @@
   .credits-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
   .credits-table tbody tr:hover { background: rgba(245,242,236,0.03); }
   .credits-table td { padding: 1.25rem 1rem 1.25rem 0; font-size: 0.86rem; color: var(--ink-mid); vertical-align: top; }
-  .credit-title { font-family: 'Special Elite', cursive; font-size: 1rem; color: var(--ink); display: block; margin-bottom: 0.2rem; }
+  .credit-title { font-family: 'Fraunces', serif; font-size: 1rem; color: var(--ink); display: block; margin-bottom: 0.2rem; }
   .credit-role {
     display: inline-block; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase;
     padding: 0.2rem 0.55rem; background: rgba(43,95,166,0.08); border: 1px solid rgba(43,95,166,0.2); color: var(--blue);
@@ -295,7 +303,7 @@
 
   /* SKILLS */
   .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
-  .skills-col h3 { font-family: 'Special Elite', cursive; font-size: 1.1rem; margin-bottom: 1.75rem; }
+  .skills-col h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 1.75rem; }
   .skill-item { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
   .skill-name { font-size: 0.88rem; color: var(--ink-mid); }
   .skill-bar-wrap { width: 90px; height: 1.5px; background: var(--border-med); position: relative; }
@@ -305,10 +313,11 @@
   .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 
   .testimonial-card {
-    padding: 1.75rem; border: 1px solid var(--border-med); background: var(--paper);
+    padding: 1.75rem; border: 1px solid var(--border-med); background: rgba(255,255,255,0.02);
     display: flex; flex-direction: column; gap: 1.25rem; position: relative;
+    border-radius: 16px;
   }
-  .testimonial-card::before { content: '('; font-size: 1.4rem; color: var(--red); opacity: 0.25; position: absolute; top: 1.25rem; right: 1.4rem; font-family: 'Courier Prime', monospace; }
+  .testimonial-card::before { content: '('; font-size: 1.4rem; color: var(--red); opacity: 0.25; position: absolute; top: 1.25rem; right: 1.4rem; font-family: 'IBM Plex Sans', sans-serif; }
 
   .testimonial-quote { font-size: 0.86rem; line-height: 1.85; color: var(--ink-mid); font-style: italic; }
   .testimonial-quote::before { content: '\201C'; color: var(--red); }
@@ -320,14 +329,14 @@
   /* RESUME */
   #resume { background: var(--paper-dark); }
   .resume-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
-  .resume-inner h2 { font-family: 'Special Elite', cursive; font-size: 1.8rem; margin-bottom: 0.4rem; }
+  .resume-inner h2 { font-family: 'Fraunces', serif; font-size: 1.8rem; margin-bottom: 0.4rem; }
   .resume-inner h2 em { color: var(--red); font-style: italic; }
   .resume-sub { font-size: 0.8rem; color: var(--ink-faint); font-style: italic; }
   .resume-actions { display: flex; gap: 1.5rem; align-items: center; }
 
   /* CONTACT */
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-  #contact h2 { font-family: 'Special Elite', cursive; font-size: 2.3rem; line-height: 1.15; margin-bottom: 1rem; }
+  #contact h2 { font-family: 'Fraunces', serif; font-size: 2.3rem; line-height: 1.15; margin-bottom: 1rem; }
   #contact h2 em { color: var(--red); font-style: italic; }
   .contact-sub { font-size: 0.86rem; color: var(--ink-faint); font-style: italic; margin-bottom: 2.5rem; }
 
@@ -341,13 +350,13 @@
   .form-group label { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
   .form-group input, .form-group textarea {
     background: transparent; border: none; border-bottom: 1px solid var(--border-med);
-    padding: 0.7rem 0; font-family: 'Courier Prime', monospace; font-size: 0.9rem;
+    padding: 0.7rem 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.95rem;
     color: var(--ink); outline: none; transition: border-color 0.2s; width: 100%; resize: none;
   }
   .form-group input:focus, .form-group textarea:focus { border-color: var(--red); }
   .form-group input::placeholder, .form-group textarea::placeholder { color: var(--ink-faint); }
   .form-submit {
-    font-family: 'Courier Prime', monospace; font-size: 0.7rem; letter-spacing: 0.1em;
+    font-family: 'IBM Plex Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--paper); background: var(--ink);
     border: none; padding: 0.9rem 2rem; cursor: pointer; transition: background 0.2s; align-self: flex-start;
   }
