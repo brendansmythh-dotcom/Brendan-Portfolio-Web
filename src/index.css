@@ -323,6 +323,10 @@
     border-top: 1px solid var(--border);
   }
 
+  .project-footer--status-only {
+    justify-content: flex-start;
+  }
+
   .proj-status-tag {
     font-size: 0.57rem;
     letter-spacing: 0.1em;
