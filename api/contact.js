@@ -12,11 +12,13 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Missing RESEND_API_KEY' })
   }
 
-  const { message } = req.body ?? {}
+  const { fullName, email, message } = req.body ?? {}
+  const trimmedFullName = String(fullName || '').trim()
+  const trimmedEmail = String(email || '').trim()
   const trimmedMessage = String(message || '').trim()
 
-  if (!trimmedMessage) {
-    return res.status(400).json({ error: 'Message is required' })
+  if (!trimmedFullName || !trimmedEmail || !trimmedMessage) {
+    return res.status(400).json({ error: 'Full name, email, and message are required' })
   }
 
   try {
@@ -29,8 +31,9 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         from: 'Portfolio Contact <onboarding@resend.dev>',
         to: ['b.smyth1@me.com'],
-        subject: 'Website inquiry',
-        text: trimmedMessage,
+        subject: `Website inquiry from ${trimmedFullName}`,
+        reply_to: trimmedEmail,
+        text: `Full Name: ${trimmedFullName}\nEmail: ${trimmedEmail}\n\nMessage:\n${trimmedMessage}`,
       }),
     })
 

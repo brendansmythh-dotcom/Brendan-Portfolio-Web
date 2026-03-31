@@ -150,9 +150,11 @@ export default function App() {
     const form = e.target
     const btn = form.querySelector('.form-submit')
     const formData = new FormData(form)
+    const fullName = String(formData.get('fullName') || '').trim()
+    const email = String(formData.get('email') || '').trim()
     const message = String(formData.get('message') || '').trim()
 
-    if (!message) return
+    if (!fullName || !email || !message) return
 
     btn.disabled = true
     btn.textContent = 'Sending...'
@@ -161,7 +163,7 @@ export default function App() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ fullName, email, message }),
       })
 
       if (!res.ok) {
@@ -493,6 +495,14 @@ export default function App() {
             </div>
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="contact-full-name">Full Name</label>
+              <input id="contact-full-name" name="fullName" type="text" placeholder="Your full name" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" placeholder="your@email.com" required />
+            </div>
             <div className="form-group">
               <label htmlFor="contact-message">Message</label>
               <textarea id="contact-message" name="message" rows={5} placeholder="Tell me about your project…" required />
