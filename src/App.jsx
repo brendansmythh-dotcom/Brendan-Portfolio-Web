@@ -307,7 +307,7 @@ export default function App() {
               <p className="project-desc">The Meek Shall inherit the Earth is a documentary following the chronicles of the canadian based organization known as Indwell, a charity that has devoted itself to fighting the rising homeless crisis in Ontario.</p>
               <div className="project-footer">
                 <span className="proj-status-tag">Produced</span>
-                <a href="#" className="project-watch-link">Watch Film →</a>
+                <a href="https://www.youtube.com/watch?v=htSdYBazOwE" target="_blank" rel="noreferrer" className="project-watch-link">Watch on YouTube →</a>
               </div>
             </div>
           </div>
