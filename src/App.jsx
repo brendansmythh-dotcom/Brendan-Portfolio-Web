@@ -309,7 +309,7 @@ export default function App() {
             <div className="project-body">
               <div className="project-role-tag">Story Editor</div>
               <div className="project-title">O&apos;Death</div>
-              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
+              <p className="project-desc">During the height of the B.C. Caribou Gold Rush, a hardworking prospector sets out in an stretch of land that appears to harbor a strange presence.</p>
               <div className="project-footer">
                 <span className="proj-status-tag">Produced</span>
                 <a href="#" className="project-watch-link">Watch Film →</a>
@@ -341,7 +341,7 @@ export default function App() {
             <div className="project-body">
               <div className="project-role-tag">Writer</div>
               <div className="project-title">Expectations</div>
-              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
+              <p className="project-desc">A young girl, Jane Doe, attends a party where she hopes to find acceptance, instead, what she finds is a cycle of misery where no one is enough.</p>
               <div className="project-footer project-footer--status-only">
                 <span className="proj-status-tag proj-status-tag--wip">Under Production</span>
               </div>
@@ -356,7 +356,7 @@ export default function App() {
             <div className="project-body">
               <div className="project-role-tag">Story Editor</div>
               <div className="project-title">Fitz</div>
-              <p className="project-desc">Add a logline or short description of the film here — genre, premise, tone.</p>
+              <p className="project-desc">After the murder of his longtime friend &amp; colleague, a former police detective turned PI must confront his troubled past as he searches for answers.</p>
               <div className="project-footer project-footer--status-only">
                 <span className="proj-status-tag proj-status-tag--wip">Under Production</span>
               </div>
