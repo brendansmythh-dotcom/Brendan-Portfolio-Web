@@ -454,7 +454,7 @@ export default function App() {
             <p className="testimonial-quote">I've had the pleasure of working with Brendan on multiple occasions, with him being a story editor and being managed by him directly as a director. I can safely say that Brendan is a competent director and writer, and that his input is very valuable.</p>
             <div className="testimonial-author">
               <div className="author-name">Thomas Kucher</div>
-              <div className="author-title">Collaborator</div>
+              <div className="author-title">Screenwriter &amp; Post-Sound</div>
             </div>
           </div>
           <div className="testimonial-card">
