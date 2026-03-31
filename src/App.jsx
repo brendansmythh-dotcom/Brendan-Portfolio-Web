@@ -340,9 +340,8 @@ export default function App() {
               <div className="project-role-tag">Story Editor</div>
               <div className="project-title">O&apos;Death</div>
               <p className="project-desc">During the height of the B.C. Caribou Gold Rush, a hardworking prospector sets out in an stretch of land that appears to harbor a strange presence.</p>
-              <div className="project-footer">
-                <span className="proj-status-tag">Produced</span>
-                <a href="#" className="project-watch-link">Watch Film →</a>
+              <div className="project-footer project-footer--status-only">
+                <span className="proj-status-tag proj-status-tag--wip">Under Production</span>
               </div>
             </div>
           </div>
@@ -430,6 +429,12 @@ export default function App() {
               <td><span className="credit-role">Film Juror</span></td>
               <td style={{ fontSize: '0.82rem', color: 'var(--ink-faint)' }}>Internship</td>
               <td style={{ fontSize: '0.82rem', color: 'var(--ink-faint)' }}>2025</td>
+            </tr>
+            <tr>
+              <td><span className="credit-title">Nayibe</span></td>
+              <td><span className="credit-role">Location Sound</span></td>
+              <td style={{ fontSize: '0.82rem', color: 'var(--ink-faint)' }}>Documentary</td>
+              <td style={{ fontSize: '0.82rem', color: 'var(--ink-faint)' }}>2023</td>
             </tr>
           </tbody>
         </table>
