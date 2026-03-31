@@ -147,13 +147,22 @@ export default function App() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    const btn = e.target.querySelector('.form-submit')
+    const form = e.target
+    const btn = form.querySelector('.form-submit')
+    const formData = new FormData(form)
+    const message = String(formData.get('message') || '').trim()
+
+    if (!message) return
+
+    const subject = encodeURIComponent('Website inquiry')
+    const body = encodeURIComponent(message)
+    window.location.href = `mailto:b.smyth1@me.com?subject=${subject}&body=${body}`
     btn.textContent = 'Message Sent.'
     btn.style.background = '#00A651'
     setTimeout(() => {
       btn.textContent = 'Send Message →'
       btn.style.background = ''
-      e.target.reset()
+      form.reset()
     }, 3000)
   }
 
