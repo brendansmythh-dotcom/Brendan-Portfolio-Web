@@ -453,10 +453,10 @@ export default function App() {
             </div>
           </div>
           <div className="testimonial-card">
-            <p className="testimonial-quote">Festival selections, jury quotes, or press mentions work here too. Even a short line from a review lends real weight.</p>
+            <p className="testimonial-quote">I had the pleasure of working with Brendan on the set of “Mongrel Bewitching”, a film that was challenging to say the least (especially for a first time director). Despite the turbulent production, Brendan kept his cool and was able to lead the crew to success, creating a film we were all proud of. In the pre-production stage when I worked with him, Brendan was consistently organized, punctual and communicative, making all of our jobs easier. He would be an asset for any film set.</p>
             <div className="testimonial-author">
-              <div className="author-name">Publication or Festival</div>
-              <div className="author-title">Film Festival · Year</div>
+              <div className="author-name">Ian Willcox</div>
+              <div className="author-title">Producer</div>
             </div>
           </div>
         </div>
