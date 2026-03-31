@@ -574,7 +574,7 @@
     border-radius: 16px;
   }
 
-  .testimonial-quote { font-size: 0.86rem; line-height: 1.85; color: var(--ink-mid); font-style: italic; }
+  .testimonial-quote { font-size: 0.86rem; line-height: 1.85; color: var(--ink-mid); font-style: italic; flex: 1; }
   .testimonial-quote::before { content: '\201C'; color: var(--red); }
   .testimonial-quote::after  { content: '\201D'; color: var(--red); }
 
