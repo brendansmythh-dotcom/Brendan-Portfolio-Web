@@ -256,14 +256,15 @@ export default function App() {
       <section id="reel">
         <div className="slugline"><span className="si">INT.</span> Demo Reel</div>
         <h2 className="reel-h">The work, <em>in motion.</em></h2>
-        <p className="reel-sub">Demo reel coming soon — check back shortly.</p>
+        <p className="reel-sub">Selected work and directing samples.</p>
         <div className="reel-box fade-up">
-          <div className="reel-placeholder">
-            <div className="reel-brackets">[ &nbsp;&nbsp;&nbsp; ]</div>
-            <span className="reel-label">
-              Demo reel placeholder<br />Paste your Vimeo or YouTube<br />embed URL here when ready
-            </span>
-          </div>
+          <iframe
+            src="https://www.youtube.com/embed/DboompjfeC4"
+            title="Brendan Smyth demo reel"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </section>
 
