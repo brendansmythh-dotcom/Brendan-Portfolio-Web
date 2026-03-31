@@ -145,7 +145,7 @@ export default function App() {
     }
   }, [])
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     const form = e.target
     const btn = form.querySelector('.form-submit')
@@ -154,16 +154,33 @@ export default function App() {
 
     if (!message) return
 
-    const subject = encodeURIComponent('Website inquiry')
-    const body = encodeURIComponent(message)
-    window.location.href = `mailto:b.smyth1@me.com?subject=${subject}&body=${body}`
-    btn.textContent = 'Message Sent.'
-    btn.style.background = '#00A651'
-    setTimeout(() => {
-      btn.textContent = 'Send Message →'
-      btn.style.background = ''
+    btn.disabled = true
+    btn.textContent = 'Sending...'
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message }),
+      })
+
+      if (!res.ok) {
+        throw new Error('Request failed')
+      }
+
+      btn.textContent = 'Message Sent.'
+      btn.style.background = '#00A651'
       form.reset()
-    }, 3000)
+    } catch (error) {
+      btn.textContent = 'Unable to Send'
+      btn.style.background = '#8b3a3a'
+    } finally {
+      window.setTimeout(() => {
+        btn.disabled = false
+        btn.textContent = 'Send Message →'
+        btn.style.background = ''
+      }, 3000)
+    }
   }
 
   return (
