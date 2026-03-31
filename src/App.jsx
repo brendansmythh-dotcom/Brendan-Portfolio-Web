@@ -168,6 +168,7 @@ export default function App() {
           <li><a href="#reel">Reel</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#credits">Credits</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#testimonials">Press</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -436,8 +437,8 @@ export default function App() {
         <div className="slugline"><span className="si">INT.</span> Résumé</div>
         <div className="resume-inner">
           <div>
-            <h2>Full credits &amp; <em>CV.</em></h2>
-            <p className="resume-sub">Complete writing history, production credits, and education — updated [Month Year].</p>
+            <h2 className="resume-title">Brendan Smyth</h2>
+            <p className="resume-sub">screenwriting resume</p>
           </div>
           <div className="resume-actions">
             <a href="resume.pdf" download className="btn-primary">Download PDF</a>
