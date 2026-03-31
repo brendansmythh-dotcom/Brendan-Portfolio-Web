@@ -417,10 +417,10 @@ export default function App() {
             </div>
           </div>
           <div className="testimonial-card">
-            <p className="testimonial-quote">Another testimonial here — ask producers, cast, or fellow writers for a short statement about your work on the page and in the room.</p>
+            <p className="testimonial-quote">I've had the pleasure of working with Brendan on multiple occasions, with him being a story editor and being managed by him directly as a director. I can safely say that Brendan is a competent director and writer, and that his input is very valuable.</p>
             <div className="testimonial-author">
-              <div className="author-name">First Last</div>
-              <div className="author-title">Producer · Company</div>
+              <div className="author-name">Thomas Kucher</div>
+              <div className="author-title">Director · Collaborator</div>
             </div>
           </div>
           <div className="testimonial-card">
