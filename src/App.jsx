@@ -410,10 +410,10 @@ export default function App() {
         <div className="slugline"><span className="si">EXT.</span> Testimonials</div>
         <div className="testimonials-grid fade-up">
           <div className="testimonial-card">
-            <p className="testimonial-quote">Replace this with a real testimonial from a collaborator, director, or producer who has worked with your scripts. Specificity makes it credible.</p>
+            <p className="testimonial-quote">It was a pleasure to have Brendan on the team.</p>
             <div className="testimonial-author">
-              <div className="author-name">First Last</div>
-              <div className="author-title">Director · Project Name</div>
+              <div className="author-name">Desirée Thyme</div>
+              <div className="author-title">CILECT Film Jury</div>
             </div>
           </div>
           <div className="testimonial-card">
