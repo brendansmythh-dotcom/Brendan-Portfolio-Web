@@ -4,7 +4,7 @@ export default function App() {
   const firstName = 'Brendan'
   const lastName = 'Smyth.'
   const subtitleLine = 'Screenwriter & Story Editor. Multiple produced credits.'
-  const sceneHeadingText = 'THE WRITTEN WORD — PRESENT DAY'
+  const sceneHeadingText = 'Screenwriting Portfolio'
   function shuffleArray(arr) {
     const a = [...arr]
     for (let i = a.length - 1; i > 0; i -= 1) {
@@ -253,7 +253,7 @@ export default function App() {
           </div>
           <div className="about-text">
             <p>
-              I am a fourth-year Bachelor of Film and Television (BFTV) student at Sheridan College, specializing in screenwriting and story editing. My work is rooted in a strong understanding of narrative structure, character development, and the collaborative nature of film production. In addition to writing, I bring hands-on experience in directing and location sound, giving me a well-rounded perspective from script to screen.
+              I am a Sheridan College graduate of the Bachelor of Film and Television (BFTV) program, specializing in screenwriting and story editing. My work is rooted in a strong understanding of narrative structure, character development, and the collaborative nature of film production. In addition to writing, I bring hands-on experience in directing and location sound, giving me a well-rounded perspective from script to screen.
             </p>
             <p>
               I recently completed an internship with the CILECT Film Jury, where I gained professional experience analyzing and evaluating films within a collaborative, industry-focused environment.
