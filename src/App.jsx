@@ -340,8 +340,9 @@ export default function App() {
               <div className="project-role-tag">Story Editor</div>
               <div className="project-title">O&apos;Death</div>
               <p className="project-desc">During the height of the B.C. Caribou Gold Rush, a hardworking prospector sets out in an stretch of land that appears to harbor a strange presence.</p>
-              <div className="project-footer project-footer--status-only">
-                <span className="proj-status-tag proj-status-tag--wip">Under Production</span>
+              <div className="project-footer">
+                <span className="proj-status-tag">Produced</span>
+                <a href="https://www.youtube.com/watch?v=3NPSrUNCnjE" target="_blank" rel="noreferrer" className="project-watch-link">Watch on YouTube →</a>
               </div>
             </div>
           </div>
