@@ -387,8 +387,9 @@ export default function App() {
               <div className="project-role-tag">Story Editor</div>
               <div className="project-title">Fitz</div>
               <p className="project-desc">After the murder of his longtime friend &amp; colleague, a former police detective turned PI must confront his troubled past as he searches for answers.</p>
-              <div className="project-footer project-footer--status-only">
-                <span className="proj-status-tag proj-status-tag--wip">Under Production</span>
+              <div className="project-footer">
+                <span className="proj-status-tag">Produced</span>
+                <a href="https://www.youtube.com/watch?v=OPDCIFtzln4" target="_blank" rel="noreferrer" className="project-watch-link">Watch on YouTube →</a>
               </div>
             </div>
           </div>
